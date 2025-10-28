@@ -19,7 +19,6 @@ if (circleX>width|| circleY>height){
         speedX *= -1;
         speedY *= -1;
 
-
 }
 
 

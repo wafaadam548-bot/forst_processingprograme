@@ -25,7 +25,7 @@ if (circleY>height|| circleY<0){
         speedX *= -1;
         speedY *= -1;
 }
-}
-void mousePressed(){
-
+strokeWeight(20);
+stroke(100, 200, 225, 100);
+line(mouseX,mouseY,200,100);
 }
