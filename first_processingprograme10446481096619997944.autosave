@@ -11,21 +11,18 @@ void setup() {
   speedX = 3;
   speedY = 2;
   score=0;
-        
+    for (int i = 0; i < 20; i++) {
+        line2=raandom(1,300);
+        line3=raandom(1,300);
+        line4=raandom(1,300);
+        line5=raandom(1,300);
+        line(line2,line3,line4,line5);}
+
 
 }
 
 void draw() {
- for (int i = 0; i < 20; i++) {
-    float line2 = random(width);
-    float line3 = random(height);
-    float line4 = random(width);
-    float line5 = random(height);
-    line(line2, line3, line4, line5);
-  }
-  background(10, 100, 200 );
-
-
+  background(10, 100, 200 , 59);
   fill(200,222,198);
   rect(0,300,512,512);
   fill(0);
@@ -47,7 +44,7 @@ void draw() {
   circleX += speedX;
   circleY += speedY;
 
-  float radius = 20;
+  float radius = 30;
   if (circleX > width - radius || circleX < radius) {
     speedX *= -1;
   }
