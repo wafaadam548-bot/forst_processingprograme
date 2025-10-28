@@ -27,7 +27,7 @@ if (circleY>height|| circleY<0){
 }
 strokeWeight(20);
 stroke(100, 200, 225, 100);
-line(mouseX+253,mouseY+253,mouseX,mouseY+253);
+line(mouseX+10,mouseY+203,mouseX+150,mouseY+203);
 }
 
 
