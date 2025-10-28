@@ -14,6 +14,8 @@ void setup() {
 
 void draw() {
   background(10, 100, 200 , 59);
+  fill(200,222,198);
+  rect(0,200,512,200);
 
   fill(0);
   textSize(20);
