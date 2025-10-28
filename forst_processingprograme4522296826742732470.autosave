@@ -1,7 +1,7 @@
 float circleX,circleY,speedX,speedY;
 void setup(){
 size(512, 512);
-frameRate(60);
+frameRate(30);
 circleX=(312);
 circleY=(212);
 speedX=1;
@@ -15,13 +15,7 @@ void draw(){
 circle(circleX,circleY,40);
 circleX+=speedX;
 circleY+=speedY;
-if (circleX>width|| circleX<0){
-        speedX *= -1;
-        speedY *= -1;
-
-
-}
-if (circleY>height|| circleY<0){
+if (circleX>width|| circleY>height){
         speedX *= -1;
         speedY *= -1;
 

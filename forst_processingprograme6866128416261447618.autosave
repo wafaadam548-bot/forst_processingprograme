@@ -1,0 +1,10 @@
+f
+void setup(){
+size(512, 512);
+ circleX=random(1,512);
+circleY=random(1,512);
+
+}
+void draw(){
+circle(circleX,circleY,40);
+}
