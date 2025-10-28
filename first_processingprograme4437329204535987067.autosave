@@ -30,7 +30,7 @@ void draw() {
 
   noStroke();
   fill(255, 50, 50);
-  circle(circleX, circleY, 20);
+  circle(circleX, circleY, 40);
   circleX += speedX;
   circleY += speedY;
 
@@ -48,7 +48,7 @@ void draw() {
     score+=1;
     text("Score: "+score,400,30);
   }
-  if (circleY>=height-radius){
+  if (circleY<height-radius){
         score=0;
         print("Score: "+score);
   }
