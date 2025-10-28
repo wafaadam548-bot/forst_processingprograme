@@ -15,8 +15,7 @@ void setup() {
 void draw() {
   background(10, 100, 200 , 59);
   fill(200,222,198);
-  rect(0,200,512,200);
-
+  rect(0,300,512,512);
   fill(0);
   textSize(20);
   text("Welcome to the guess the ball game", 60, 30);
