@@ -16,14 +16,14 @@ void setup() {
 }
 
 void draw() {
- for (int i = 0; i < 20; i++) {
+ /**for (int i = 0; i < 20; i++) {
     float line2 = random(width);
     float line3 = random(height);
     float line4 = random(width);
     float line5 = random(height);
     line(line2, line3, line4, line5);
-  }
-  background(10, 100, 200 );
+  }***/
+  background(random(200), random(200),random(200) );
 
 
   fill(200,222,198);
