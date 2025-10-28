@@ -1,6 +1,7 @@
 float circleX, circleY, speedX, speedY;
-float lineX, lineY, lineX2, lineY2;
+float lineX, lineY, lineX2, lineY2,line2,line3,line4,line5;
 int score;
+
 
 void setup() {
   size(512, 512);
