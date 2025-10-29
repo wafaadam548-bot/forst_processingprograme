@@ -12,7 +12,7 @@ void setup() {
   speedY = 2;
   score=0;
   
-  frameRate(70);
+  frameRate(90);
 
 }
 
@@ -36,9 +36,12 @@ void draw() {
   fill(0);
   textSize(20);
   text("Welcome to the guess the ball game", 60, 30);
-  text("Score:"+score,400,40);
+  text("Score             "+score,380,40);
   fill(200,30,100,0);
-  rect(400,40,400,60);
+  stroke(0);
+  strokeWeight(5);
+  rect(370,10,200,40);
+  line(450,10,450,50);
   lineX = mouseX - 60;
   lineX2 = mouseX + 60;
   lineY = 450;
