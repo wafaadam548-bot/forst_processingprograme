@@ -1,4 +1,4 @@
-float circleX, circleY, speedX, speedY;
+float circleX, circleY, speedX, speedY,bgR,bgG,bgB;
 float lineX, lineY, lineX2, lineY2,line2,line3,line4,line5;
 int score;
 
@@ -11,11 +11,18 @@ void setup() {
   speedX = 3;
   speedY = 2;
   score=0;
-        
+  bgR=lerp(bgR, random(200), 0.01);
+  bgG=lerp(bgG,random(220),0.01);
+  bgB=lerp(bgB,random(200),0.01);
+  frameRate(20);
+  background(bgR,bgB,bgG);
+
 
 }
 
 void draw() {
+  background(200, 200,200 );
+
  /**for (int i = 0; i < 20; i++) {
     float line2 = random(width);
     float line3 = random(height);
@@ -23,8 +30,7 @@ void draw() {
     float line5 = random(height);
     line(line2, line3, line4, line5);
   }***/
-  background(random(200), random(200),random(200) );
-
+  
 
   fill(200,222,198);
   rect(0,300,512,512);
@@ -50,9 +56,16 @@ void draw() {
   float radius = 20;
   if (circleX > width - radius || circleX < radius) {
     speedX *= -1;
+    fill(random(255), random(255), random(255));
+    background(bgR,bgB,bgG);
+
+
   }
   if (circleY > height - radius || circleY < radius) {
     speedY *= -1;
+    fill(random(255), random(255), random(255));
+    background(bgR,bgB,bgG);
+
   }
 
   if ((circleY + radius >= lineY && circleY - radius <= lineY) && (circleX >= lineX && circleX <= lineX2)) {
@@ -60,9 +73,13 @@ void draw() {
     speedY *= -1;
     score+=1;
     text("Score: "+score,400,30);
+    background(bgR,bgB,bgG);
+
   }
   if (circleY>=height-radius){
         score=0;
         print("Score: "+score);
+        background(bgR,bgB,bgG);
+
   }
 }
