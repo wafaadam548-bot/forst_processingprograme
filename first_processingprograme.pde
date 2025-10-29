@@ -37,7 +37,8 @@ void draw() {
   textSize(20);
   text("Welcome to the guess the ball game", 60, 30);
   text("Score:"+score,400,40);
-
+  fill(200,30,100,0);
+  rect(400,40,400,60);
   lineX = mouseX - 60;
   lineX2 = mouseX + 60;
   lineY = 450;
