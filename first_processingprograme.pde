@@ -11,17 +11,16 @@ void setup() {
   speedX = 3;
   speedY = 2;
   score=0;
-  bgR=lerp(bgR, random(200), 0.01);
-  bgG=lerp(bgG,random(220),0.01);
-  bgB=lerp(bgB,random(200),0.01);
-  frameRate(20);
-  background(bgR,bgB,bgG);
-
+  
+  frameRate(70);
 
 }
 
 void draw() {
-  background(200, 200,200 );
+  bgR=80+50*sin(frameCount*0.01);
+  bgG=80+50*sin(frameCount*0.013);  //sin is new it is to make like Gradient in the color the values 80,70,80 thats control the shining 
+  bgG=80+50*sin(frameCount*0.017);
+  background(bgR,bgB,bgG);
 
  /**for (int i = 0; i < 20; i++) {
     float line2 = random(width);
@@ -32,7 +31,7 @@ void draw() {
   }***/
   
 
-  fill(200,222,198);
+  fill(200,222,198,30);
   rect(0,300,512,512);
   fill(0);
   textSize(20);
@@ -53,18 +52,16 @@ void draw() {
   circleX += speedX;
   circleY += speedY;
 
-  float radius = 20;
+  float radius = 10;
   if (circleX > width - radius || circleX < radius) {
     speedX *= -1;
     fill(random(255), random(255), random(255));
-    background(bgR,bgB,bgG);
 
 
   }
   if (circleY > height - radius || circleY < radius) {
     speedY *= -1;
     fill(random(255), random(255), random(255));
-    background(bgR,bgB,bgG);
 
   }
 
@@ -73,13 +70,11 @@ void draw() {
     speedY *= -1;
     score+=1;
     text("Score: "+score,400,30);
-    background(bgR,bgB,bgG);
 
   }
   if (circleY>=height-radius){
         score=0;
         print("Score: "+score);
-        background(bgR,bgB,bgG);
 
   }
 }
