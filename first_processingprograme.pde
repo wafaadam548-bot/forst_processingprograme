@@ -1,3 +1,5 @@
+import processing.sound.*;
+SoundFile coin;
 float circleX, circleY, speedX, speedY, bgR, bgG, bgB;
 float lineX, lineY, lineX2, lineY2;
 int score;
@@ -8,6 +10,7 @@ float[] prizeY = new float[3];
 boolean[] prizeActive = new boolean[10];
 
 void setup() {
+  coin=new SoundFile(this,"coin.wav");
   size(512, 512);
   frameRate(60);
   circleX = 312;
@@ -56,11 +59,15 @@ void draw() {
       if (prizeY[i] > height) {
         prizeY[i] = random(-300, 0);
         prizeX[i] = random(width);
+
       }
       if (prizeY[i] >= lineY - 6 && prizeX[i] >= lineX && prizeX[i] <= lineX2) {
         score += 5;
         prizeY[i] = random(-300, 0);
         prizeX[i] = random(width);
+        coin.play();
+
+      
       }
     }
   }
