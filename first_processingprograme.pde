@@ -52,7 +52,26 @@ void draw() {
     float line5 = random(height);
     line(line2, line3, line4, line5);
   }***/
-  
+  fill(255, 215, 0);
+  noStroke();
+  for (int i = 0; i < prizeX.length; i++) {
+    if prizeActive[i]
+     {
+    ellipse(prizeX[i], prizeY[i], 12, 12);
+    prizeY[i] += 2;  
+        if (prizeY[i] > height) {
+      prizeY[i] = random(-300, 0);
+      prizeX[i] = random(width);
+    }
+  }
+  float d = dist(circleX, circleY, prizeX[i], prizeY[i]);
+    if (d < 20) {  
+      score += 5; 
+      prizeActive[i] = false;
+      prizeX[i] = random(width);
+      prizeY[i] = random(-200, 0);
+      prizeActive[i] = true;}
+      //here I should add voice   
 
   fill(200,222,198,10);
   rect(0,300,512,512);
