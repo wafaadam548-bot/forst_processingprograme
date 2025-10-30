@@ -88,9 +88,9 @@ void draw() {
     speedY *= -1;
     score += 1;
   }
-  if (circleY >= height - radius) 
+  if (circleY >= height - radius) {
   score = 0;
   circleX = width / 2;
   circleY = height / 2;
-  speedY = -abs(speedY);
+  speedY = -abs(speedY);}
 }
