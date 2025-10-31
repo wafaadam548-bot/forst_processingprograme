@@ -100,4 +100,8 @@ void draw() {
   circleX = width / 2;
   circleY = height / 2;
   speedY = -abs(speedY);}
+  if (score%10==0&score>0){
+    speedX*=1.05;
+    speedY*=1.05;
+  }
 }
