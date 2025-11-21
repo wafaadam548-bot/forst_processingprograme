@@ -28,6 +28,20 @@ The higher your score, the faster the ball moves!
 2. Double-click the **`Bounce & Catch.exe`** file.  
 3. Enjoy playing!
 ---
+## 🚀 How to Run(using Processing)
+
+Download the file named first_processingprogram.pde (or your main game .pde file).
+
+Save the .pde file inside a new folder on your computer. You can rename the folder and the file if you want, but keep the .pde extension.
+
+Open the Processing app on your computer. If you don’t have it yet, download it from processing.org
+.
+
+In Processing, click File > Open, then navigate to the folder where you saved your .pde file and select it.
+
+Click the Run button (the ▶️ icon) at the top of the Processing window to start the game.
+
+To play the game, use your mouse to move the paddle left and right and enjoy!
 
 ## 🧠 Project Type
 **Software Project – Interactive Game**
